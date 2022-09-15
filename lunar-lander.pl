@@ -37,9 +37,21 @@ print "CAPSULE WEIGHT 32,500 LBS; FUEL WEIGHT 16,500 LBS.\n";
 print "\n\n\nGOOD LUCK\n";
 
 # 120 L=0
+$L = 0;
+
 # 130 PRINT: PRINT "SEC","MI + FT","MPH","LB FUEL","BURN RATE":PRINT
+print "\n", "SEC", "\t", "MI+FT", "\t", "MPH", "\t", "LB FUEL", "\t",
+  "BURN RATE\n";
+
 # 140 A=120:V=1:M=33000:N=16500:G=1E-03:Z=1.8
+$A = 120, $V = 1, $M = 33000, $N = 16500, $G = 1E-03, $Z = 1.8;
+
 # 150 PRINT L,INT(A);INT(5280*(A-INT(A))),3600*V,M-N,:INPUT K:T=10
+print $L, "\t", $A, "\t", int( 5280 * ( $A - int($A) ) ), "\t", 3600 * $V,
+  "\t", $M - $N, "\n";
+
+$T = 10;
+
 # 160 IF M-N<1E-03 THEN 240
 # 170 IF T<1E-03 THEN 150
 # 180 S=T: IF M>=N+S*K THEN 200
